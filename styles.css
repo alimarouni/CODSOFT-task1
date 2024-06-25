@@ -1,0 +1,234 @@
+/*top nav*/
+body{
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+    margin: 0;
+}
+nav{
+    display: flex;
+}
+.nav-list {
+    display: flex; 
+    list-style: none; 
+    justify-content: center;
+    align-items: center;
+}
+.nav-list a{
+    text-decoration: none;
+    color: white;
+}
+.nav-list li{
+    display: inline;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-size: 18px;
+}
+.nav-list li:hover{
+    transform: translateX(5px);
+    text-decoration: underline;
+}
+.logo{
+    width: 60%;
+    margin-left: 2%;
+    margin-top: 4px;
+}
+.logo img{
+    width: 25%;
+}
+
+/*body*/
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+    padding: 2% 0;
+}
+
+#left-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 3em;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+    padding: 0 10px;
+    background-color: black;
+    border: 2px solid white;
+    width: 50%;
+}
+.search-input {
+    border: none;
+    outline: none;
+    padding: 12px 8px;
+    font-size: 16px;
+    border-radius: 24px;
+    background-color: black;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+}
+.search-input::placeholder {
+    color: white;
+    font-size: 20px;
+}
+#right-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.right-image{
+    width: 40%;
+}
+.hr1{
+    margin: 0 30%;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about p{
+    width: 50%;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+.btn{
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(to right, #9aca9f, #80bd86, #5EBC67, #68af6f, #c2eac6);
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.5); 
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 16px;
+    outline: none; 
+    margin-bottom: 1%;
+}
+.btn:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.6); 
+    background: linear-gradient(to right, #c1e3c4, #9ccfa1, #7acc82, #95c99a, #e5f8e7);
+    transform: translateY(-2px); 
+}
+.services{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inner-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    color: #0c0c0c;
+    transition: all 0.5s ease;
+}
+.card:hover{
+    background:linear-gradient(135deg,rgba(255, 255, 255, 0.315),rgba(255, 255, 255, 0.365));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+}
+.icon{
+    width: 25%;
+    margin-top: 2px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #9aca9f, #80bd86,#9aca9f, #5EBC67,#9aca9f, #68af6f, #c2eac6);
+    margin-top: 2%;
+    height: 20vh;
+}
+.links{
+    width: 90%;
+}
+.links a{
+padding: 2%;
+text-decoration: underline;
+cursor: pointer;
+color: black;
+}
+.social-media{
+    width: 20%;
+}
+.social-media i{
+    padding: 4% 2% 2% 4%;
+    background-color: black;
+    margin: 2%;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media (max-width:900px){
+    .mountain-p{
+        font-size: large;
+    }
+    .logo img{
+        width: 35%;
+    }
+
+}
+@media (max-width:700px){
+    .mountain-p{
+        font-size: medium;
+    }
+    .logo img{
+        width: 50%;
+    }
+}
+@media (max-width:500px){
+    .logo img{
+        width: 150px;
+    }
+    .inner-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .card{
+        width: 60%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+@media(max-width:600px){
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+    }
+}
